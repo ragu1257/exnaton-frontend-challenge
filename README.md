@@ -15,6 +15,8 @@ The goal of this task was to:
   - Total Self-Consumption
 - Handle edge cases like missing or unavailable data.
 
+## Task B - Product & Design
+ **https://www.figma.com/board/rZQgo3GE4WFY3g8I7awEl6/Exanaton---Task-B?node-id=0-1**
 ---
 
 ## Features
