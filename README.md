@@ -1,46 +1,96 @@
-# Getting Started with Create React App
+# Exnaton Coding Challenge - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the **Exnaton Coding Challenge**, where the goal was to build a frontend tool for visualizing energy usage data in a user-friendly manner. The project retrieves and processes energy data from a fictive API and visualizes it through **KPIs** and **charts**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Task Overview
 
-### `npm start`
+### Task A - Coding
+The goal of this task was to:
+- **Visualize energy data** grouped by daily, weekly, and monthly intervals.
+- Compute and display **Key Performance Indicators (KPIs)**:
+  - Total Production
+  - Total Consumption
+  - Total Self-Consumption
+- Handle edge cases like missing or unavailable data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+### Features Implemented
+#### 1. **Energy Data Fetching:**
+- Fetched energy data from a fictive API and treated it as a real API response.
+- Handled loading, error states, and empty datasets.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### 2. **Data Grouping by Intervals:**
+- Grouped energy data into daily, weekly, and monthly intervals for visualization.
 
-### `npm run build`
+#### 3. **Dynamic Visualizations:**
+- Used Recharts to display a line chart representing:
+  - Energy production
+  - Energy consumption
+  - Self-consumed energy
+  - Grid withdrawal/injection
+- Responsive design for different screen sizes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 4. **KPIs:**
+- Computed and displayed:
+  - Total production
+  - Total consumption
+  - Total self-consumed energy.
+ 
+#### 5. **User Interaction:**
+- Provided interval selection through radio buttons (daily, weekly, monthly).
+- Real-time data updates based on the selected interval.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `npm run eject`
+### **Dashboard with KPIs and Graphs**
+![Screenshot 2024-11-23 at 9 50 26 PM](https://github.com/user-attachments/assets/fe350179-5686-410b-9437-860bd18a6429)
+![Screenshot 2024-11-23 at 9 50 39 PM](https://github.com/user-attachments/assets/1cd0fdd1-55e5-417b-b610-4186bf1fb87a)
+![Screenshot 2024-11-23 at 9 50 51 PM](https://github.com/user-attachments/assets/2747f265-62d4-47c5-9566-e6bef96cddcc)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Design 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### The components were structured with scalability in mind:
 
-## Learn More
+#### 1. **KPIs Component:**
+- Modular and reusable for displaying any type of calculated metrics.
+- Can be extended to support more KPIs in the future.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 2. **EnergyInfoTable:**
+- Handles grouping and visualizing energy data.
+- Decoupled logic for easy maintenance.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+## Libraries and Tools Used
+#### 1. **React**: For building the user interface.
+#### 2. **TypeScript**: For type safety and better developer experience.
+#### 3. **Recharts**: For creating responsive, interactive charts.
+#### 4. **date-fns**: For date manipulation and formatting.
+#### 5. **Fetch API**: For retrieving energy data from the fictive API.
+#### 6. **CSS**: For basic styling.
+
+---
+
+## Setup
+
+#### To run the project locally:
+
+#### 1. Clone the repository:
+    git clone <repository_url>
+    cd <repository_name>
+#### 2. Install dependencies:
+    npm install
+#### 3. Start the development server:
+    npm start
+#### 4. Access the app in your browser at 
+    http://localhost:3000
